@@ -1,7 +1,13 @@
-from RPLCD.i2c import CharLCD
+from openskyclass import OpenSky
+from config import get_token
 
 def main():
-    print("Hi")
+    print("hello world")
+    token = get_token()
+    print(token)
+    api = OpenSky(token)
+    api.get_state_vectors()
 
-if __name__ == "main":
+
+if __name__ == "__main__":
     main()
