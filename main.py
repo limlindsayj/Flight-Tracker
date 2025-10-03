@@ -1,12 +1,10 @@
-from openskyclass import OpenSky
+import api
 from config import get_token
+#import requests
 
 def main():
-    print("hello world")
     token = get_token()
-    print(token)
-    api = OpenSky(token)
-    api.get_state_vectors()
+    api.create_flights(token)
 
 
 if __name__ == "__main__":

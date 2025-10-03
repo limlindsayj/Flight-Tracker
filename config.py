@@ -7,8 +7,13 @@ load_dotenv()
 OPEN_SKY_ID = os.getenv("OPEN_SKY_ID")
 OPEN_SKY_SECRET = os.getenv("OPEN_SKY_SECRET")
 
-LONGITUDE = os.getenv("LONGITUDE")
-LATITUDE = os.getenv("LATITUDE")
+LAMIN = os.getenv("LAMIN")
+LAMAX = os.getenv("LAMAX")
+LOMIN = os.getenv("LOMIN")
+LOMAX = os.getenv("LOMAX")
+
+GC_KEY = os.getenv("GC_KEY")
+GC_ID = os.getenv("GC_ID")
 
 def get_token():
     url = "https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token"
