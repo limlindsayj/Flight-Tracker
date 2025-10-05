@@ -40,5 +40,6 @@ def create_flights(token):
     states = get_state_vectors(token)
     for state in states:
         flight_data = get_flight_data(state[ICAO24_INDEX])
-        print(flight_data)
+        flights.append(flight_data)
+    return flights
     

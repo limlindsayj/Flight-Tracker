@@ -1,7 +1,9 @@
 from RPLCD.i2c import CharLCD
+import time 
 
-# Adjust '0x27' if your i2cdetect shows a different address
 lcd = CharLCD('PCF8574', 0x27)
 
 lcd.write_string("Hello, World!")
 
+def write_lcd(string):
+    lcd.write_string(string)

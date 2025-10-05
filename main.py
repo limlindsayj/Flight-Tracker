@@ -1,10 +1,11 @@
 import api
 from config import get_token
-#import requests
-
+from lcd_test import write_lcd
 def main():
     token = get_token()
-    api.create_flights(token)
+    flights = api.create_flights(token)
+    write_lcd(flights[0])
+
 
 
 if __name__ == "__main__":
